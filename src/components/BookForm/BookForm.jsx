@@ -7,6 +7,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
 import "./BookForm.css";
+import { Typography } from "@mui/material";
 
 const BookAddForm = () => {
   const { register, handleSubmit, reset, watch, control } = useForm();
@@ -33,6 +34,18 @@ const BookAddForm = () => {
 
   return (
     <div className="add-service mt-4">
+      <Typography
+        style={{
+          alignItems: "center",
+          marginLeft: "650px",
+        }}
+        sx={{ color: "#272727", fontWeight: "bold" }}
+        variant="h4"
+        gutterBottom
+        component="div"
+      >
+        Add Book
+      </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
           label="Book Name"
